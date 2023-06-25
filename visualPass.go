@@ -38,6 +38,7 @@ func visualPass() {
 	if err != nil {
 		log.Fatal("Error requesting Sat data:", err)
 	}
+	resp.Close = true
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {

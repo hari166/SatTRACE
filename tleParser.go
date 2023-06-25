@@ -29,6 +29,7 @@ func getTLE() {
 	if err != nil {
 		log.Fatal("Error requesting TLE data:", err)
 	}
+	resp.Close = true
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
