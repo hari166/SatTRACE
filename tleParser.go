@@ -47,6 +47,12 @@ func getTLE() {
 	fmt.Println(tleData.Data)
 	fmt.Print("\n")
 	parsed := strings.Split(tleData.Data, "\n")
+
+	if len(parsed) < 2 {
+		fmt.Println("Decomissioned satellite. No longer in orbit.")
+		return
+	}
+
 	line1 := parsed[0]
 	line2 := parsed[1]
 
