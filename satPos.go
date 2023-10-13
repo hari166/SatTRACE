@@ -49,6 +49,6 @@ func satPos() {
 	for _, v := range position.Pos {
 		fmt.Println("Latitude:", v.Lat)
 		fmt.Println("Longitude:", v.Long)
-		fmt.Println("Altiude:", v.Alt, "km")
+		fmt.Println("Altitude:", v.Alt, "km")
 	}
 }
