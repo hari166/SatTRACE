@@ -1,4 +1,6 @@
-										[1] TLE Parser
-										[2] Satellite Position
-										[3] Visual Passes
-										[4] Exit
+										[1] TLE Parser (Query by ID)
+										[2] TLE Parser (Query by Name)
+										[3] Satellite Position
+										[4] Visual Passes
+										[5] Populate Database
+										[6] Exit
