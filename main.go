@@ -16,13 +16,18 @@ func main() {
 			fmt.Println("Invalid input:", err)
 			continue
 		}
+		fmt.Scanln()
 		if input == 1 {
-			getTLE()
+			parserTLE()
 		} else if input == 2 {
-			satPos()
+			satDB()
 		} else if input == 3 {
-			visualPass()
+			satPos()
 		} else if input == 4 {
+			visualPass()
+		} else if input == 5 {
+			populateDB()
+		} else if input == 6 {
 			fmt.Println("Exited.")
 			os.Exit(0)
 		} else {
