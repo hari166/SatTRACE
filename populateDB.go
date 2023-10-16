@@ -33,12 +33,12 @@ func populateDB() {
 
 	count := 0
 
-	//28000->28999
-	//28000->29999
-	//30000->30999
 	//31000->31999
+	//32000->32999
+	//33000->33999
+	//34000->34999
 
-	for id := 28000; id <= 28999; id++ {
+	for id := 30000; id <= 30999; id++ {
 
 		url := fmt.Sprintf("https://api.n2yo.com/rest/v1/satellite/tle/%d&apiKey=%s", id, encoded)
 		res, err := http.Get(url)
