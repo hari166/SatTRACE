@@ -17,13 +17,15 @@ type TLEData struct {
 	}
 }
 
-func getTLE() {
+func parserTLE() {
 	var id int
 	fmt.Println("Enter NORAD ID: ")
 	fmt.Scan(&id)
 	apiKey := setKey()
 	encoded := url.QueryEscape(apiKey)
-
+	getTLE(encoded, id)
+}
+func getTLE(encoded string, id int) {
 	url := fmt.Sprintf("https://api.n2yo.com/rest/v1/satellite/tle/%d&apiKey=%s", id, encoded)
 	resp, err := http.Get(url)
 	if err != nil {
