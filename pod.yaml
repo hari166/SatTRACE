@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: sattrace
+  name: sattrace
+spec:
+  containers:
+  - image: hari166/sattrace
+    name: sattrace
+    resources: {}
+    env:
+    - name: N2YO
+      valueFrom:
+        secretKeyRef:
+          name: n2yo
+          key: N2YO
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
